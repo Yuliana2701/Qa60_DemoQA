@@ -10,7 +10,6 @@ public class ProfilePage extends BasePage {
     public ProfilePage(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(css = "#userName-value")
     WebElement userName;
     public ProfilePage verifyUserName(String text) {

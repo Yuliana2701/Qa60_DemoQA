@@ -28,6 +28,7 @@ public class BasePage {
     }
    // public void clickWithJS(WebElement element,int x ,int y){
 
+
      //   moveWithJS(x, y);
       //  click(element);
  //   }
