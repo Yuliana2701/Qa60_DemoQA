@@ -14,7 +14,14 @@ public class HomePage extends BasePage{
 
     public SidePanel getBookStore() {
         click(bookstore);
-        // clickWithJS(bookstore, 0, 300);
+      //  clickWithJS(bookstore, 0, 300);
         return new SidePanel(driver);
+    }
+    @FindBy(css = ".card:nth-child(3)")
+    WebElement alertsFrameWindows;
+    public SidePanel getAlertsFrameWindows() {
+        clickWithJS(alertsFrameWindows, 0, 600);
+        return new SidePanel(driver);
+
     }
 }
