@@ -1,6 +1,7 @@
 package com.demoqa.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -57,6 +58,23 @@ public class BasePage {
     public void hideIFrames(){
         hideAd();
         hideFooter();
+    }
+    public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    public boolean isElementDisplayed(WebElement element){
+    try {
+        element.isDisplayed();
+        return true;
+    }catch (NoSuchElementException exception){
+        exception.getMessage();
+        return false;
+    }
     }
 }
 
