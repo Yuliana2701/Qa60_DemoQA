@@ -9,33 +9,35 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
 public class MenuPage extends BasePage {
+
     public MenuPage(WebDriver driver) {
         super(driver);
     }
-@FindBy(xpath = "//a[.='Main Item 2']")
+
+    @FindBy(xpath = "//a[.='Main Item 2']")
     WebElement mainItem2;
 
     @FindBy(xpath = "//a[.='SUB SUB LIST »']")
     WebElement subSubList;
 
     @FindBy(xpath = "//a[.='Sub Sub Item 1']")
-    WebElement subSubItem1;
+    WebElement subItem1;
 
     public MenuPage selectSubMenu() {
-        pause(1000);
-        moveWithJS(0,200);
 
+        pause(1000);
+        moveWithJS(0, 200);
         Actions actions = new Actions(driver);
+
         actions.moveToElement(mainItem2).perform();
         actions.moveToElement(subSubList).perform();
-        actions.moveToElement(subSubItem1).perform();
-
+        actions.moveToElement(subItem1).perform();
         return this;
     }
 
 
     public MenuPage verifySubMenu() {
-        Assert.assertTrue(isElementDisplayed(subSubItem1));
+        Assert.assertTrue(isElementDisplayed(subItem1));
         return this;
     }
 }
