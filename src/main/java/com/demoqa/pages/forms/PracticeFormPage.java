@@ -115,6 +115,7 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "react-select-3-input")
     WebElement stateInput;
     public PracticeFormPage inputState(String state) {
+        pause(1000);
         stateInput.sendKeys(state);
         stateInput.sendKeys(Keys.ENTER);
         return this;
@@ -129,7 +130,8 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "submit")
     WebElement submit;
     public PracticeFormPage submit() {
-        click(submit);
+        pause(3000);
+        clickWithJS(submit,0,600);
         return this;
     }
     @FindBy(id = "example-modal-sizes-title-lg" )

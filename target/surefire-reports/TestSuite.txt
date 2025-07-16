@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 11.839 s <<< FAILURE! - in TestSuite
+precondition(com.demoqa.tests.LoginTests)  Time elapsed: 5.235 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+Element <span class="text"> is not clickable at point (101,566) because another element <div id="fixedban"> obscures it
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [41269e44-9dad-4819-b961-622c5021d1cb, clickElement {id=405541e4-07f2-4158-90db-a74daa37f799}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.2, moz:accessibilityChecks: false, moz:buildID: 20250627085530, moz:debuggerAddress: 127.0.0.1:25321, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10632, moz:profile: C:\Users\yuliana\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:25321/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (41269e44-9dad-4819-b961-622c5021d1cb)] -> xpath: //span[.='Login']]
+Session ID: 41269e44-9dad-4819-b961-622c5021d1cb
+	at com.demoqa.tests.LoginTests.precondition(LoginTests.java:14)
+
